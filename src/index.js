@@ -1,7 +1,7 @@
 import {createStore} from 'redux';
 
 
-const reducer = (state = 0, action) => {
+const counter = (state = 0, action) => {
     switch (action.type) {
         case 'INC':
             return state + 1;
@@ -12,11 +12,21 @@ const reducer = (state = 0, action) => {
     }
 };
 
-const store = createStore(reducer);
+const store = createStore(counter);
 
-store.subscribe(() => {
-    console.log(store.getState())
-});
+document
+    .querySelectorAll('.btn')
+    .forEach((btn) => {
+        btn.addEventListener('click', function () {
+            const id = this.getAttribute('id');
+            store.dispatch({type: id.toUpperCase()});
+        })
+    });
 
-store.dispatch({type: 'INC'});
-store.dispatch({type: 'INC'});
+const update = () => {
+    document
+        .querySelector('#counter')
+        .textContent = store.getState();
+};
+
+store.subscribe(update);
