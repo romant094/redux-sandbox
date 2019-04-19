@@ -1,12 +1,15 @@
-import {createStore} from 'redux';
-
+import {CreateStore} from 'react-redux';
+import {createStore} from "redux/es/redux";
 
 const counter = (state = 0, action) => {
+    console.log(action);
     switch (action.type) {
         case 'INC':
             return state + 1;
         case 'DEC':
             return state - 1;
+        case 'RND':
+            return state + action.rndValue;
         default:
             return state;
     }
@@ -19,7 +22,11 @@ document
     .forEach((btn) => {
         btn.addEventListener('click', function () {
             const id = this.getAttribute('id');
-            store.dispatch({type: id.toUpperCase()});
+            const rndValue = Math.floor(Math.random() * 10) + 1;
+            store.dispatch({
+                type: id.toUpperCase(),
+                rndValue
+            });
         })
     });
 
