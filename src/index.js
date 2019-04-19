@@ -1,5 +1,4 @@
-import {CreateStore} from 'react-redux';
-import {createStore} from "redux/es/redux";
+import {createStore} from 'redux';
 
 const counter = (state = 0, action) => {
     console.log(action);
