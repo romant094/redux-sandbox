@@ -13,3 +13,5 @@ Added structure
 bindActionCreators
 ## lesson 7
 Render using Redux
+## lesson 8
+Use of global Redux store
