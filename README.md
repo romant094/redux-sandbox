@@ -17,3 +17,5 @@ Render using Redux
 Use of global Redux store
 ## lesson 9
 Update global store
+## lesson 10
+Refactoring
