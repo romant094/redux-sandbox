@@ -15,3 +15,5 @@ bindActionCreators
 Render using Redux
 ## lesson 8
 Use of global Redux store
+## lesson 9
+Update global store
