@@ -11,3 +11,5 @@ Rewrote code in other way. Added action creator.
 Added structure
 ## lesson 6
 bindActionCreators
+## lesson 7
+Render using Redux
