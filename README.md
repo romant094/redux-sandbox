@@ -9,3 +9,5 @@ Reducer function must be a pure function. To change state action object needs to
 Rewrote code in other way. Added action creator.
 ## lesson 5
 Added structure
+## lesson 6
+bindActionCreators
